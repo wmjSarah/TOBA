@@ -1,3 +1,5 @@
+/*Sarah Wilderman August 2018*/
+/*Regular Styles*/
 h1, h3, p {
     color:teal;
     text-shadow: 3px 3px 3px #ffefef;
@@ -39,3 +41,7 @@ input[type=submit] {
     margin-bottom:15px;
     width: 25%;
 }
+
+/*Class Styles*/
+
+/*ID Styles*/
