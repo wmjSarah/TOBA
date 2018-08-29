@@ -1,15 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/*©2018 Sarah Wilderman
+A simple user class for Titan Online Banking*/
 package titanOBA;
 import java.io.Serializable;
 
-/**
- *
- * @author BetaRay
- */
 public class User implements Serializable {
     private String firstName;
     private String lastName;
