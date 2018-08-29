@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="TOBAstyle.css">
+        <link rel="stylesheet" type = "text/css" href="TOBAStyles.css">
         <title>Titan Online Banking</title>
     </head>
     <body>
@@ -20,7 +20,6 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Login.html">Login/Register</a></li>
-                <li><a href="Account_activity.html">My Account</a></li>
             </ul>
         </nav>
         

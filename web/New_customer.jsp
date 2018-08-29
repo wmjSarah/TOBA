@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="TOBAstyle.css">
+        <link rel="stylesheet" type = "text/css" href="TOBAStyles.css">
         <title>Titan Online Banking</title>
     </head>
     <body>
@@ -20,7 +20,6 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Login.html">Login/Register</a></li>
-                <li><a href="Account_activity.html">My Account</a></li>
             </ul>
         </nav>
         
@@ -28,23 +27,26 @@
             <h3>Account Login</h3>
             <p>Please Login Below or Choose "New Customer Sign Up" to be taken to an Account Registration Page</p>
             
-            <form>
-                <label>First Name:</label>
-                <input type="text" name="firstName" required><br>
-                <label>Last Name:</label>
-                <input type="text" name="lastName" required><br>
-                <label>Phone:</label>
-                <input type="text" name="phone" required><br>
-                <label>Address:</label>
-                <input type="text" name="address" required><br>
-                <label>City:</label>
-                <input type="text" name="city" required><br>
-                <label>State:</label>
-                <input type="text" name="state" required><br>
-                <label>Zipcode:</label>
-                <input type="text" name="zipcode" required><br>
-                <label>E-Mail:</label>
-                <input type="email" name="passWord" required><br>
+            <p><em>${message}</em></p>
+            
+            <form action="newCustomer" method="post">
+                <input type="hidden" name="toggle" value="yes">
+                <label>First Name:</label><br>
+                <input type="text" name="firstName"><br>
+                <label>Last Name:</label><br>
+                <input type="text" name="lastName" ><br>
+                <label>Phone:</label><br>
+                <input type="text" name="phone"><br>
+                <label>Address:</label><br>
+                <input type="text" name="address"><br>
+                <label>City:</label><br>
+                <input type="text" name="city"><br>
+                <label>State:</label><br>
+                <input type="text" name="state"><br>
+                <label>Zipcode:</label><br>
+                <input type="text" name="zipcode"><br>
+                <label>E-Mail:</label><br>
+                <input type="email" name="email"><br>
                 <input type="submit" value="Submit">
             </form>
         </main>

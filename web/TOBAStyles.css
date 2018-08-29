@@ -1,0 +1,41 @@
+h1, h3, p {
+    color:teal;
+    text-shadow: 3px 3px 3px #ffefef;
+}
+
+nav ul {
+    padding-left: 0px;
+}
+nav ul li {
+    display: inline-block;
+    padding-right: 25px;
+}
+
+form {
+    width:100%;
+    max-width: 550px;
+    border: 3px solid teal;
+    border-radius: 10px;
+    
+}
+
+label {
+    color: teal;
+    margin-left: 10px;
+    padding-bottom: 10px;
+}
+
+input {
+    width:90%;
+    max-width: 275px;
+    margin-top:3px;
+    margin-left:10px;
+    box-sizing: border-box;
+    box-shadow: 2px 5px #fff;
+}
+
+input[type=submit] {
+    margin-top: 15px;
+    margin-bottom:15px;
+    width: 25%;
+}
