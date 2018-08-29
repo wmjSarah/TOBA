@@ -1,4 +1,6 @@
-
+/*©2018 Sarah Wilderman
+Login Servlet for Titan Online Banking
+*/
 package titanOBA;
 
 import java.io.IOException;
