@@ -12,24 +12,10 @@ and open the template in the editor.
         <link rel="stylesheet" type = "text/css" href="TOBAStyles.css">
     </head>
     <body>
-        <header>
-             <h1>Titan Online Banking Application</h1>
-        </header>
-        
+        <h1>Titan Online Banking Application</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Login.html">Login/Register</a></li>
+                <li><a href="index.jsp">Home</a></li>
+                <li><a href="Login.jsp">Login/Register</a></li>
             </ul>
         </nav>
-        
-        <main>
-            <h3>Success!</h3>
-            <p>You have successfully created an account!</p>
-        </main>
-        
-        <footer>
-            <p><a href="index.html">Home</a></p>
-        </footer>
-    </body>
-</html>

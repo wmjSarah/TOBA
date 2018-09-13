@@ -1,6 +1,5 @@
 /*©2018 Sarah Wilderman
-Login Servlet for Titan Online Banking
-*/
+Login Servlet for Titan Online Banking*/
 package titanOBA;
 
 import java.io.IOException;
@@ -19,7 +18,7 @@ public class LoginServlet extends HttpServlet {
     {
         String userName = req.getParameter("userName");
         String passWord = req.getParameter("passWord");
-        String url = "/Account_activity.html";
+        String url = "/Account_activity.jsp";
         
         if (userName.equals("jsmith@toba.com") && (passWord.equals("letmein"))) {
             getServletContext().getRequestDispatcher(url).forward(req, resp);

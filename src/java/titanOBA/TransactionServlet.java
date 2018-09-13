@@ -1,3 +1,5 @@
+/*©2018 Sarah Wilderman
+Empty Transaction Servlet for Titan Online Banking*/
 package titanOBA;
 
 import java.io.IOException;

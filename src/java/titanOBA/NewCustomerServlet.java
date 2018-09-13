@@ -1,12 +1,17 @@
+/*©2018 Sarah Wilderman
+New Customer Registration Servlet for Titan Online Banking*/
 package titanOBA;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.http.*;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import titanOBA.User;
+
 
 public class NewCustomerServlet extends HttpServlet {
     
@@ -14,6 +19,10 @@ public class NewCustomerServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException 
     {        
+        HttpSession session = req.getSession();
+        
+        
+        
         String url= "/index.html";
         
         String toggle = req.getParameter("toggle");
@@ -26,6 +35,9 @@ public class NewCustomerServlet extends HttpServlet {
         String zipcode = req.getParameter("zipcode");
         String email = req.getParameter("email");
         
+        User user = new User(firstName, lastName, phone, address, city, state, zipcode, email, (lastName)+(zipcode), "welcome1");
+        session.setAttribute("user", user);
+        
         String message = "";
         
         if ((toggle.equals("yes")) && (firstName == null || lastName == null || phone == null || address == null ||
@@ -36,11 +48,12 @@ public class NewCustomerServlet extends HttpServlet {
             url = "/New_customer.jsp";
         }
         
-        else  if (toggle.equals("yes")) {
-            res.sendRedirect("Success.html");
+        else{
+            url = "/Success.jsp";
         }
         req.setAttribute("message", message);
         getServletContext().getRequestDispatcher(url).forward(req,res);
+   
         
     }
     
@@ -48,6 +61,5 @@ public class NewCustomerServlet extends HttpServlet {
             throws ServletException, IOException {
         doPost(req, res);
     }
-    
     
 }
