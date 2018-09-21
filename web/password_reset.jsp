@@ -14,7 +14,6 @@
                 <input type="hidden" name="oldPass" value="${user.password}"><br>
                 <label>New Password:</label><br>
                 <input type="text" name="newPass" required><br>
-                        <c:set target="${user}" property="password" value= "newPass"/>
                 <input type="submit" value="Change Password">
             </form>
 

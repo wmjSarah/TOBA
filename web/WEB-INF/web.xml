@@ -15,7 +15,6 @@
     <servlet-mapping>
         <servlet-name>NewCustomerServlet</servlet-name>
         <url-pattern>/newCustomer</url-pattern>
-        <url-pattern>/passwordReset</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>TransactionServlet</servlet-name>
@@ -24,6 +23,14 @@
     <servlet-mapping>
         <servlet-name>TransactionServlet</servlet-name>
         <url-pattern>/trans</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>PasswordResetServlet</servlet-name>
+        <servlet-class>titanOBA.PasswordResetServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PasswordResetServlet</servlet-name>
+        <url-pattern>/passwordReset</url-pattern>
     </servlet-mapping>
     <error-page>
         <error-code>404</error-code>

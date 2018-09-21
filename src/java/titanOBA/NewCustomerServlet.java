@@ -34,9 +34,9 @@ public class NewCustomerServlet extends HttpServlet {
         String state = req.getParameter("state");
         String zipcode = req.getParameter("zipcode");
         String email = req.getParameter("email");
+
         
-        User user = new User(firstName, lastName, phone, address, city, state, zipcode, email, (lastName)+(zipcode), "welcome1");
-        session.setAttribute("user", user);
+        
         
         String message = "";
         
@@ -49,6 +49,8 @@ public class NewCustomerServlet extends HttpServlet {
         }
         
         else{
+            User user = new User(firstName, lastName, phone, address, city, state, zipcode, email, (lastName+zipcode), "welcome1");
+            session.setAttribute("user", user);
             url = "/Success.jsp";
         }
         req.setAttribute("message", message);

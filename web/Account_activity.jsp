@@ -3,9 +3,13 @@
 <c:import url="/includes/header.jsp"/>
         <main>
             <h3>Account Activity</h3>
-            <c:if test="${user != null}">
-                <p>Hello, ${user.firstName}!</p>
-            </c:if>}
-            <p>${user.firstName}</p>
+            <c:choose>
+            <c:when test="${user != null}">
+                <p>Hello, ${user.firstName} ${user.lastName}!</p>
+            </c:when>
+            <c:otherwise>
+                <p>You are not Logged In! Please go back and use the Login Page!</p>
+            </c:otherwise>
+            </c:choose>
         </main>
 <c:import url="includes/footer.jsp"/>
