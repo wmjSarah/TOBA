@@ -8,7 +8,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import titanOBA.User;
+import titanOBA.*;
+import titanOBA.data.UserDB;
 
 public class PasswordResetServlet extends HttpServlet {
     
@@ -23,8 +24,9 @@ public class PasswordResetServlet extends HttpServlet {
         String url = "/password_reset.jsp";
         
         User user = (User) session.getAttribute("user");
+
+        UserDB.update(user);
         
-        user.setPassword(newPass);
         url = "/Account_activity.jsp";
         getServletContext().getRequestDispatcher(url).forward(req,res);
         
